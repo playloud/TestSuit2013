@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PSH_IPN_8_55_58102_003_DEVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="LU_Anatomy">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Anatomy" Type="varchar" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="LU_BestOverallResponse">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BestOverallResponse" Type="varchar" MaxLength="80" />
+          <Property Name="Ranking" Type="int" />
+        </EntityType>
+        <EntityType Name="LU_BoneScanAssessment">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Assessment" Type="varchar" MaxLength="80" />
+          <Property Name="Description" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'PSH_IPN_8_55_58102_003_DEV.dbo.LU_BoneScanLesionLabel' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="LU_BoneScanLesionLabel">
+          <Property Name="RecordId" Type="int" />
+          <Property Name="LesionLabel" Type="varchar" MaxLength="10" />
+          <Property Name="BRow" Type="int" />
+        </EntityType>-->
+        <EntityType Name="LU_BoneScanLesionLocation">
+          <Key>
+            <PropertyRef Name="RecordId" />
+          </Key>
+          <Property Name="RecordId" Type="int" Nullable="false" />
+          <Property Name="LesionLabel" Type="int" Nullable="false" />
+          <Property Name="LesionLocation" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="LesionDescription" Type="varchar" MaxLength="212" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="LU_BoneScanLesionStatus">
+          <Key>
+            <PropertyRef Name="RecordId" />
+          </Key>
+          <Property Name="RecordId" Type="int" Nullable="false" />
+          <Property Name="StatusDescription" Type="varchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LU_BoneScanQualityComment">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QualityComment" Type="varchar" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="LU_FinalVisitResponse">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FinalVisitResponse" Type="varchar" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="LU_LesionLabel">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LesionLabel" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="LRow" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LU_LesionResponse_NonTarget">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LesionResponse" Type="varchar" MaxLength="80" />
+          <Property Name="Description" Type="varchar" MaxLength="380" />
+        </EntityType>
+        <EntityType Name="LU_LesionSiteOrgan">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LesionSite" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="LocationCommentFlag" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Organ" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="LateralityRequired" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="LU_LesionStatusAll">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LesionStatus" Type="varchar" MaxLength="80" />
+          <Property Name="LesionCommentFlag" Type="varchar" MaxLength="80" />
+          <Property Name="MIRAOverlayRequired" Type="varchar" MaxLength="80" />
+          <Property Name="ForTarget" Type="int" Nullable="false" />
+          <Property Name="ForBL" Type="int" Nullable="false" />
+          <Property Name="InitialCLD" Type="int" Nullable="false" />
+          <Property Name="ForNonTarget" Type="int" Nullable="false" />
+          <Property Name="ForFU" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LU_LesionTypeAll">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LesionType" Type="varchar" MaxLength="80" />
+          <Property Name="ForBL" Type="int" />
+          <Property Name="ForFU" Type="int" />
+        </EntityType>
+        <EntityType Name="LU_Modality">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Modality" Type="varchar" MaxLength="80" />
+          <Property Name="MeasurableFlag" Type="varchar" MaxLength="80" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PSH_IPN_8_55_58102_003_DEV.dbo.LU_ModalityNumbers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="LU_ModalityNumbers">
+          <Key>
+            <PropertyRef Name="ModalityNumber" />
+          </Key>
+          <Property Name="ModalityNumber" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LU_QualityComment">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QualityComment" Type="varchar" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="LU_RadiologyQuality">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RadiologyQuality" Type="varchar" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="LU_ReviewerVisitResponse">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReviewerVisitResponse" Type="varchar" MaxLength="80" />
+        </EntityType>
+        <EntityContainer Name="PSH_IPN_8_55_58102_003_DEVModelStoreContainer">
+          <EntitySet Name="LU_Anatomy" EntityType="Self.LU_Anatomy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_BestOverallResponse" EntityType="Self.LU_BestOverallResponse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_BoneScanAssessment" EntityType="Self.LU_BoneScanAssessment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_BoneScanLesionLocation" EntityType="Self.LU_BoneScanLesionLocation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_BoneScanLesionStatus" EntityType="Self.LU_BoneScanLesionStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_BoneScanQualityComment" EntityType="Self.LU_BoneScanQualityComment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_FinalVisitResponse" EntityType="Self.LU_FinalVisitResponse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_LesionLabel" EntityType="Self.LU_LesionLabel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_LesionResponse_NonTarget" EntityType="Self.LU_LesionResponse_NonTarget" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_LesionSiteOrgan" EntityType="Self.LU_LesionSiteOrgan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_LesionStatusAll" EntityType="Self.LU_LesionStatusAll" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_LesionTypeAll" EntityType="Self.LU_LesionTypeAll" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_Modality" EntityType="Self.LU_Modality" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_QualityComment" EntityType="Self.LU_QualityComment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_RadiologyQuality" EntityType="Self.LU_RadiologyQuality" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_ReviewerVisitResponse" EntityType="Self.LU_ReviewerVisitResponse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LU_ModalityNumbers" EntityType="Self.LU_ModalityNumbers" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [LU_ModalityNumbers].[ModalityNumber] AS [ModalityNumber]
+    FROM [dbo].[LU_ModalityNumbers] AS [LU_ModalityNumbers]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PSH_IPN_8_55_58102_003_DEVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="LU_Anatomy">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Anatomy" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LU_BestOverallResponse">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BestOverallResponse" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Ranking" Type="Int32" />
+        </EntityType>
+        <EntityType Name="LU_BoneScanAssessment">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Assessment" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LU_BoneScanLesionLocation">
+          <Key>
+            <PropertyRef Name="RecordId" />
+          </Key>
+          <Property Name="RecordId" Type="Int32" Nullable="false" />
+          <Property Name="LesionLabel" Type="Int32" Nullable="false" />
+          <Property Name="LesionLocation" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LesionDescription" Type="String" MaxLength="212" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="LU_BoneScanLesionStatus">
+          <Key>
+            <PropertyRef Name="RecordId" />
+          </Key>
+          <Property Name="RecordId" Type="Int32" Nullable="false" />
+          <Property Name="StatusDescription" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LU_BoneScanQualityComment">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QualityComment" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LU_FinalVisitResponse">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FinalVisitResponse" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LU_LesionLabel">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LesionLabel" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LRow" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LU_LesionResponse_NonTarget">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LesionResponse" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="380" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LU_LesionSiteOrgan">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LesionSite" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LocationCommentFlag" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Organ" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LateralityRequired" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LU_LesionStatusAll">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LesionStatus" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="LesionCommentFlag" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="MIRAOverlayRequired" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="ForTarget" Type="Int32" Nullable="false" />
+          <Property Name="ForBL" Type="Int32" Nullable="false" />
+          <Property Name="InitialCLD" Type="Int32" Nullable="false" />
+          <Property Name="ForNonTarget" Type="Int32" Nullable="false" />
+          <Property Name="ForFU" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LU_LesionTypeAll">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LesionType" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="ForBL" Type="Int32" />
+          <Property Name="ForFU" Type="Int32" />
+        </EntityType>
+        <EntityType Name="LU_Modality">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Modality" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="MeasurableFlag" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LU_QualityComment">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QualityComment" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LU_RadiologyQuality">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RadiologyQuality" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LU_ReviewerVisitResponse">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReviewerVisitResponse" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LU_ModalityNumbers">
+          <Key>
+            <PropertyRef Name="ModalityNumber" />
+          </Key>
+          <Property Name="ModalityNumber" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="PSH_IPN_8_55_58102_003_DEVEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="LU_Anatomy" EntityType="Self.LU_Anatomy" />
+          <EntitySet Name="LU_BestOverallResponse" EntityType="Self.LU_BestOverallResponse" />
+          <EntitySet Name="LU_BoneScanAssessment" EntityType="Self.LU_BoneScanAssessment" />
+          <EntitySet Name="LU_BoneScanLesionLocation" EntityType="Self.LU_BoneScanLesionLocation" />
+          <EntitySet Name="LU_BoneScanLesionStatus" EntityType="Self.LU_BoneScanLesionStatus" />
+          <EntitySet Name="LU_BoneScanQualityComment" EntityType="Self.LU_BoneScanQualityComment" />
+          <EntitySet Name="LU_FinalVisitResponse" EntityType="Self.LU_FinalVisitResponse" />
+          <EntitySet Name="LU_LesionLabel" EntityType="Self.LU_LesionLabel" />
+          <EntitySet Name="LU_LesionResponse_NonTarget" EntityType="Self.LU_LesionResponse_NonTarget" />
+          <EntitySet Name="LU_LesionSiteOrgan" EntityType="Self.LU_LesionSiteOrgan" />
+          <EntitySet Name="LU_LesionStatusAll" EntityType="Self.LU_LesionStatusAll" />
+          <EntitySet Name="LU_LesionTypeAll" EntityType="Self.LU_LesionTypeAll" />
+          <EntitySet Name="LU_Modality" EntityType="Self.LU_Modality" />
+          <EntitySet Name="LU_QualityComment" EntityType="Self.LU_QualityComment" />
+          <EntitySet Name="LU_RadiologyQuality" EntityType="Self.LU_RadiologyQuality" />
+          <EntitySet Name="LU_ReviewerVisitResponse" EntityType="Self.LU_ReviewerVisitResponse" />
+          <EntitySet Name="LU_ModalityNumbers" EntityType="Self.LU_ModalityNumbers" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PSH_IPN_8_55_58102_003_DEVModelStoreContainer" CdmEntityContainer="PSH_IPN_8_55_58102_003_DEVEntities">
+          <EntitySetMapping Name="LU_Anatomy">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_Anatomy">
+              <MappingFragment StoreEntitySet="LU_Anatomy">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="Anatomy" ColumnName="Anatomy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_BestOverallResponse">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_BestOverallResponse">
+              <MappingFragment StoreEntitySet="LU_BestOverallResponse">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="BestOverallResponse" ColumnName="BestOverallResponse" />
+                <ScalarProperty Name="Ranking" ColumnName="Ranking" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_BoneScanAssessment">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_BoneScanAssessment">
+              <MappingFragment StoreEntitySet="LU_BoneScanAssessment">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="Assessment" ColumnName="Assessment" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_BoneScanLesionLocation">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_BoneScanLesionLocation">
+              <MappingFragment StoreEntitySet="LU_BoneScanLesionLocation">
+                <ScalarProperty Name="RecordId" ColumnName="RecordId" />
+                <ScalarProperty Name="LesionLabel" ColumnName="LesionLabel" />
+                <ScalarProperty Name="LesionLocation" ColumnName="LesionLocation" />
+                <ScalarProperty Name="LesionDescription" ColumnName="LesionDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_BoneScanLesionStatus">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_BoneScanLesionStatus">
+              <MappingFragment StoreEntitySet="LU_BoneScanLesionStatus">
+                <ScalarProperty Name="RecordId" ColumnName="RecordId" />
+                <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_BoneScanQualityComment">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_BoneScanQualityComment">
+              <MappingFragment StoreEntitySet="LU_BoneScanQualityComment">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="QualityComment" ColumnName="QualityComment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_FinalVisitResponse">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_FinalVisitResponse">
+              <MappingFragment StoreEntitySet="LU_FinalVisitResponse">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="FinalVisitResponse" ColumnName="FinalVisitResponse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_LesionLabel">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_LesionLabel">
+              <MappingFragment StoreEntitySet="LU_LesionLabel">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="LesionLabel" ColumnName="LesionLabel" />
+                <ScalarProperty Name="LRow" ColumnName="LRow" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_LesionResponse_NonTarget">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_LesionResponse_NonTarget">
+              <MappingFragment StoreEntitySet="LU_LesionResponse_NonTarget">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="LesionResponse" ColumnName="LesionResponse" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_LesionSiteOrgan">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_LesionSiteOrgan">
+              <MappingFragment StoreEntitySet="LU_LesionSiteOrgan">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="LesionSite" ColumnName="LesionSite" />
+                <ScalarProperty Name="LocationCommentFlag" ColumnName="LocationCommentFlag" />
+                <ScalarProperty Name="Organ" ColumnName="Organ" />
+                <ScalarProperty Name="LateralityRequired" ColumnName="LateralityRequired" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_LesionStatusAll">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_LesionStatusAll">
+              <MappingFragment StoreEntitySet="LU_LesionStatusAll">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="LesionStatus" ColumnName="LesionStatus" />
+                <ScalarProperty Name="LesionCommentFlag" ColumnName="LesionCommentFlag" />
+                <ScalarProperty Name="MIRAOverlayRequired" ColumnName="MIRAOverlayRequired" />
+                <ScalarProperty Name="ForTarget" ColumnName="ForTarget" />
+                <ScalarProperty Name="ForBL" ColumnName="ForBL" />
+                <ScalarProperty Name="InitialCLD" ColumnName="InitialCLD" />
+                <ScalarProperty Name="ForNonTarget" ColumnName="ForNonTarget" />
+                <ScalarProperty Name="ForFU" ColumnName="ForFU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_LesionTypeAll">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_LesionTypeAll">
+              <MappingFragment StoreEntitySet="LU_LesionTypeAll">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="LesionType" ColumnName="LesionType" />
+                <ScalarProperty Name="ForBL" ColumnName="ForBL" />
+                <ScalarProperty Name="ForFU" ColumnName="ForFU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_Modality">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_Modality">
+              <MappingFragment StoreEntitySet="LU_Modality">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="Modality" ColumnName="Modality" />
+                <ScalarProperty Name="MeasurableFlag" ColumnName="MeasurableFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_QualityComment">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_QualityComment">
+              <MappingFragment StoreEntitySet="LU_QualityComment">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="QualityComment" ColumnName="QualityComment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_RadiologyQuality">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_RadiologyQuality">
+              <MappingFragment StoreEntitySet="LU_RadiologyQuality">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="RadiologyQuality" ColumnName="RadiologyQuality" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_ReviewerVisitResponse">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_ReviewerVisitResponse">
+              <MappingFragment StoreEntitySet="LU_ReviewerVisitResponse">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="ReviewerVisitResponse" ColumnName="ReviewerVisitResponse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_ModalityNumbers">
+            <EntityTypeMapping TypeName="PSH_IPN_8_55_58102_003_DEVModel.LU_ModalityNumbers">
+              <MappingFragment StoreEntitySet="LU_ModalityNumbers">
+                <ScalarProperty Name="ModalityNumber" ColumnName="ModalityNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Profile>
+	
+	<Project name="CEL1 abi 007 panc 002">
+		<source>C:\AppDev\eCRF\eCRF.CEE1.ABI-007-PANC-003\bin\Debug</source>
+		<Domain name="TestingTemp">
+			<Target>\\beaconbio\mira\MIRA_FS1\MEDLLI\DEV\CEE1-012\TestingTemp</Target>
+			<DBConnectionString>Data Source=PA-IMI-VAL-01\MSSQLSRVR_2008R2;initial catalog=PSH_CEE1_ABI_007_PANC_003_TEST;User ID=ecrfuser;PWD=3crfus3r;</DBConnectionString>
+			<ShowRevision>false</ShowRevision>
+			<UpdateReleaseDate>true</UpdateReleaseDate>
+		</Domain>
+	</Project>
+
+	
+	
+	
+	
+</Profile>
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a265e5b8133c4fe3b41865f99681bbe9" Name="Diagram1">
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_Anatomy" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_BestOverallResponse" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_BoneScanAssessment" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_BoneScanLesionLocation" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_BoneScanLesionStatus" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_BoneScanQualityComment" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_FinalVisitResponse" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_LesionLabel" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_LesionResponse_NonTarget" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_LesionSiteOrgan" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_LesionStatusAll" Width="2.25" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_LesionTypeAll" Width="2.375" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_Modality" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_QualityComment" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_RadiologyQuality" Width="1.5" PointX="9.125" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_ReviewerVisitResponse" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PSH_IPN_8_55_58102_003_DEVModel.LU_ModalityNumbers" Width="1.5" PointX="6.75" PointY="9.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

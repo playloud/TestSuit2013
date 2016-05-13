@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PSH_BOR1_003_1200_131_PROD_1" Class="PSH_ProdDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=PA-IMI-VAL-01\MSSQLSRVR_2008R2;Initial Catalog=PSH_BOR1_003_1200_131_PROD_1;Integrated Security=True" SettingsObjectName="DataMover.Properties.Settings" SettingsPropertyName="PSH_BOR1_003_1200_131_PROD_1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CD_AE" Member="CD_AEs">
+    <Type Name="CD_AE">
+      <Column Name="RECORDID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ISVALID" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="STUDY" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="CENTRE" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="PT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="AEMNM" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="AEONDT" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="AEENDDT" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="AEOUT" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AETHPA" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="CTCAE" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AEACTE" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AERDTOX" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AESERA" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AESDTH" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AESLIFE" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AESDISAB" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AESRHOS" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AESPHOS" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AESCONG" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AESMIE" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AESPI" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AEREL" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AEFUP" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AEX1" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Column Name="VISOUT" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="TINV" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="GPVIS" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="REFERS" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="PHYSIO" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="OCCTHP" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="NURSE" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="OTH1" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AEX2" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Column Name="VISITS1" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="VISITS2" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="VISITS3" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="VISITS4" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="VISITS5" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="VISITS6" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="VISITS7" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="EXPRNC" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MRISC" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="CTSCAN" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="US" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="XRAYB" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="OTH2" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AEX3" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Column Name="ADMISDT1" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="DISCHDT1" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="ICUDYS1" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="EMERG1" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="ADMISDT2" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="DISCHDT2" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="ICUDYS2" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="EMERG2" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="ADMISDT3" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="DISCHDT3" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="ICUDYS3" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="EMERG3" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="AEX4" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CD_BPSY" Member="CD_BPSies">
+    <Type Name="CD_BPSY">
+      <Column Name="RECORDID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ISVALID" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="STUDY" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="CENTRE" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="PT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="ACTEVENT" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="VDATE" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="BIOPYN" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="BIONYMD" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="LESITE" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="BIOCRER" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="HISTCLN" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="HISTX" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CD_NDIS" Member="CD_NDIs">
+    <Type Name="CD_NDI">
+      <Column Name="RECORDID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ISVALID" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="STUDY" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="CENTRE" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="PT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="VDATE" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="NKDISC" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="SURYMD" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="SURGNM" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CD_PE" Member="CD_PEs">
+    <Type Name="CD_PE">
+      <Column Name="RECORDID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ISVALID" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="STUDY" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="CENTRE" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="PT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="ACTEVENT" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="VDATE" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="WTSTD" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="ECOG" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="SYS" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="DIA" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="PR" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="PHYSC" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="IMAGA" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="BIOPYN" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CD_ROR" Member="CD_RORs">
+    <Type Name="CD_ROR">
+      <Column Name="RECORDID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ISVALID" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="STUDY" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="CENTRE" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="PT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="VDATE" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="TMRESD" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="SURYMD" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="SURGNM" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

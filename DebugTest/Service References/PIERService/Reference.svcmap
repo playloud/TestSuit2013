@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a8ec7c5b-ff1b-45b4-b13f-9c21cb1b5a23" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://pa-imi-ws-01/IMIIntegrationServices/PIERService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PIERService.xsd" MetadataType="Schema" ID="ec5f2fd7-1c2f-4f60-8aac-100a019b1804" SourceId="1" SourceUrl="http://pa-imi-ws-01/IMIIntegrationServices/PIERService?xsd=xsd0" />
+    <MetadataFile FileName="PIERService.wsdl" MetadataType="Wsdl" ID="c63eaad7-1f99-4859-a6cc-f066d6bdba03" SourceId="1" SourceUrl="http://pa-imi-ws-01/IMIIntegrationServices/PIERService?wsdl" />
+    <MetadataFile FileName="PIERService1.xsd" MetadataType="Schema" ID="4608954b-1ab6-4a41-9918-be734a0cc8ff" SourceId="1" SourceUrl="http://pa-imi-ws-01/IMIIntegrationServices/PIERService?xsd=xsd2" />
+    <MetadataFile FileName="PIERService2.xsd" MetadataType="Schema" ID="37f0a848-34b5-49c1-a93e-9fe210965a33" SourceId="1" SourceUrl="http://pa-imi-ws-01/IMIIntegrationServices/PIERService?xsd=xsd4" />
+    <MetadataFile FileName="PIERService.disco" MetadataType="Disco" ID="ca160302-32b0-45a6-8e10-dfb410c7481c" SourceId="1" SourceUrl="http://pa-imi-ws-01/IMIIntegrationServices/PIERService?disco" />
+    <MetadataFile FileName="PIERService3.xsd" MetadataType="Schema" ID="a9446396-153a-4117-a5f1-f10ccce7887c" SourceId="1" SourceUrl="http://pa-imi-ws-01/IMIIntegrationServices/PIERService?xsd=xsd1" />
+    <MetadataFile FileName="PIERService4.xsd" MetadataType="Schema" ID="9a83edd1-0738-4b7b-a53c-9b875c7b2873" SourceId="1" SourceUrl="http://pa-imi-ws-01/IMIIntegrationServices/PIERService?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

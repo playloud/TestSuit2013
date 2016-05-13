@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="SilverlightApplicationTest.SLUControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White" Margin="0,0,187,208" RenderTransformOrigin="0.507,0.435">
+        <TextBlock HorizontalAlignment="Left" Margin="30,19,0,0" TextWrapping="Wrap" Text="This is my SLUControl" VerticalAlignment="Top" Height="26" Width="140"/>
+        <Image HorizontalAlignment="Left" Height="37" Margin="75,45,0,0" VerticalAlignment="Top" Width="50" Source="images/prettyGirl.png"/>
+    </Grid>
+</UserControl>

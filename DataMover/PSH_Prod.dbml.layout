@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 13.5" name="PSH_Prod">
+  <DataContextMoniker Name="/PSH_ProdDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5be9e3be-0f51-4167-bf70-579e9fdb9a32" absoluteBounds="0.75, 0.75, 2, 12.539777018229165">
+      <DataClassMoniker Name="/PSH_ProdDataContext/CD_AE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5069b40-8191-4ef9-beec-9902d03db600" absoluteBounds="0.765, 1.21, 1.9700000000000002, 11.979777018229166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d8eea19-6da9-4bb9-b194-181294f1b0ee" absoluteBounds="3.75, 0.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/PSH_ProdDataContext/CD_BPSY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38b7e269-9d63-4995-853b-4e98821981e8" absoluteBounds="3.765, 1.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3fb5a784-6511-468a-88b6-03f46118169c" absoluteBounds="3.75, 5.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/PSH_ProdDataContext/CD_NDI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3704ccd0-ed37-46d6-82a3-83c82f6b357d" absoluteBounds="3.765, 6.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e433a1b4-b529-4326-b7bc-e7f51c475fa5" absoluteBounds="6.75, 0.75, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/PSH_ProdDataContext/CD_PE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="acd3c7c3-ec11-4750-81de-15f6ad19a866" absoluteBounds="6.765, 1.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f2085aa-f509-4985-bae9-881da4bf6ac3" absoluteBounds="6.75, 5.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/PSH_ProdDataContext/CD_ROR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fe98d1a8-c011-4a49-b887-68b8ee2b9003" absoluteBounds="6.765, 6.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

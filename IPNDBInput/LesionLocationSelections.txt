@@ -1,0 +1,31 @@
+﻿Esophagus	Yes	No	Esophagus
+Stomach	Yes	No	Stomach
+Large Intestine	No	No	Large Intestine
+Small Intestine	No	No	Small Intestine
+Rectosigmoid  Junction	No	No	Rectosigmoid  Junction
+Rectum	No	No	Rectum
+Anal Canal/Anus	Yes	No	Anal Canal/Anus
+Liver	Yes	No	Liver
+Gallbladder	No	No	Gallbladder
+Pancreas	Yes	No	Pancreas
+Lung/Bronchus 	Yes	Yes	Lung
+Thymus	No	No	Thymus
+Heart	Yes	No	Heart
+Pleura	No	No	Lung
+Retroperitoneum and Peritoneum	Yes	No	Retroperitoneum and Peritoneum
+Ascites	No	No	No organ
+Other Connective and Soft Tissue	Yes	No	Other Connective and Soft Tissue
+Penis	Yes	No	Penis
+Prostate	No	No	Prostate
+Testis	Yes	Yes	Testis
+Kidney	No	Yes	Kidney
+Ureter	No	Yes	Ureter
+Bladder	Yes	No	Bladder
+Urethra	No	No	Urethra
+Meninges	Yes	No	Meninges
+Brain	Yes	No	Brain
+Spinal Cord/Cranial Nerv/Oth Part of CNS	Yes	No	CNS
+Thyroid Gland	No	No	Thyroid
+Adrenal Gland	Yes	Yes	Adrenal
+Lymph Nodes	Yes	No	Lymph Nodes
+Other	Yes	No	No organ

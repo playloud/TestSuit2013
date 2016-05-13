@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+        <EntityContainer Name="Model1TargetContainer" >
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CH_Case" EntityType="Model1.CH_Case" />
+          <EntitySet Name="CH_Visit" EntityType="Model1.CH_Visit" />
+          <AssociationSet Name="CH_CaseCH_Visit" Association="Model1.CH_CaseCH_Visit">
+            <End Role="CH_Case" EntitySet="CH_Case" />
+            <End Role="CH_Visit" EntitySet="CH_Visit" />
+          </AssociationSet>
+          <EntitySet Name="ReadLogs" EntityType="Model1.ReadLog" />
+          <EntitySet Name="BORRecords" EntityType="Model1.BORRecord" />
+          <AssociationSet Name="CH_CaseReadLog" Association="Model1.CH_CaseReadLog">
+            <End Role="CH_Case" EntitySet="CH_Case" />
+            <End Role="ReadLog" EntitySet="ReadLogs" />
+          </AssociationSet>
+          <AssociationSet Name="ReadLogBORRecord" Association="Model1.ReadLogBORRecord">
+            <End Role="ReadLog" EntitySet="ReadLogs" />
+            <End Role="BORRecord" EntitySet="BORRecords" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CH_Case">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="CH_Visit" Relationship="Model1.CH_CaseCH_Visit" FromRole="CH_Case" ToRole="CH_Visit" />
+          <NavigationProperty Name="ReadLog" Relationship="Model1.CH_CaseReadLog" FromRole="CH_Case" ToRole="ReadLog" />
+        </EntityType>
+        <EntityType Name="CH_Visit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="CH_Case" Relationship="Model1.CH_CaseCH_Visit" FromRole="CH_Visit" ToRole="CH_Case" />
+        </EntityType>
+        <Association Name="CH_CaseCH_Visit">
+          <End Type="Model1.CH_Case" Role="CH_Case" Multiplicity="1" />
+          <End Type="Model1.CH_Visit" Role="CH_Visit" Multiplicity="1" />
+        </Association>
+        <EntityType Name="ReadLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="CH_Case" Relationship="Model1.CH_CaseReadLog" FromRole="ReadLog" ToRole="CH_Case" />
+          <NavigationProperty Name="BORRecords" Relationship="Model1.ReadLogBORRecord" FromRole="ReadLog" ToRole="BORRecord" />
+        </EntityType>
+        <EntityType Name="BORRecord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="ReadLog" Relationship="Model1.ReadLogBORRecord" FromRole="BORRecord" ToRole="ReadLog" />
+          <Property Name="ReadLogId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="CH_CaseReadLog">
+          <End Type="Model1.CH_Case" Role="CH_Case" Multiplicity="1" />
+          <End Type="Model1.ReadLog" Role="ReadLog" Multiplicity="1" />
+        </Association>
+        <Association Name="ReadLogBORRecord">
+          <End Type="Model1.ReadLog" Role="ReadLog" Multiplicity="1" />
+          <End Type="Model1.BORRecord" Role="BORRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReadLog">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BORRecord">
+              <PropertyRef Name="ReadLogId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="Model1" />
+        <Alias Key="Target" Value="Model1.Store" />
+        <EntityContainerMapping CdmEntityContainer="Model1Container" StorageEntityContainer="Model1TargetContainer">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

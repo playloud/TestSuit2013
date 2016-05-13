@@ -1,0 +1,9 @@
+﻿Present stable	No	Yes
+Present unequivocal progression	Yes	Yes
+Not Present total disappearance 	No	No
+Not Present resolved 	No	No
+NE - technique or artifact	No	No
+NE - lesion or background change	No	No
+NE - insufficient coverage	No	No
+NE - lesion irradiated	No	No
+NE - Other specify	Yes	No

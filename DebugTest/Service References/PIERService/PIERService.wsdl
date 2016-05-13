@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PIERService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://pa-imi-ws-01/IMIIntegrationServices/PIERService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://pa-imi-ws-01/IMIIntegrationServices/PIERService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://pa-imi-ws-01/IMIIntegrationServices/PIERService?xsd=xsd2" />
+      <xsd:import schemaLocation="http://pa-imi-ws-01/IMIIntegrationServices/PIERService?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://pa-imi-ws-01/IMIIntegrationServices/PIERService?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPIERService_StartSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartSession" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_StartSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectRecords" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectClinicalDataRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectClinicalDataRecords" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectClinicalDataRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectClinicalDataRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectVisitClinicalDataRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectVisitClinicalDataRecords" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectVisitClinicalDataRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectVisitClinicalDataRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectVisitUnReadClinicalDataRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectVisitUnReadClinicalDataRecords" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectVisitUnReadClinicalDataRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectVisitUnReadClinicalDataRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_SetSubjectVisitAsRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSubjectVisitAsRead" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_SetSubjectVisitAsRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSubjectVisitAsReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_SetClinicalDataRecordsAsRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetClinicalDataRecordsAsRead" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_SetClinicalDataRecordsAsRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetClinicalDataRecordsAsReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_StartSessionUsingHMAC_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartSessionUsingHMAC" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_StartSessionUsingHMAC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartSessionUsingHMACResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetLatestUserSessionKeyUsingHMAC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestUserSessionKeyUsingHMAC" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetLatestUserSessionKeyUsingHMAC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestUserSessionKeyUsingHMACResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectRecordsUsingHMAC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectRecordsUsingHMAC" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectRecordsUsingHMAC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectRecordsUsingHMACResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectVisitClinicalDataRecordsUsingHMAC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectVisitClinicalDataRecordsUsingHMAC" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectVisitClinicalDataRecordsUsingHMAC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectVisitClinicalDataRecordsUsingHMACResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectVisitUnReadClinicalDataRecordsUsingHMAC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectVisitUnReadClinicalDataRecordsUsingHMAC" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectVisitUnReadClinicalDataRecordsUsingHMAC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectVisitUnReadClinicalDataRecordsUsingHMACResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectClinicalDataRecordsUsingHMAC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectClinicalDataRecordsUsingHMAC" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_GetSubjectClinicalDataRecordsUsingHMAC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubjectClinicalDataRecordsUsingHMACResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_SetSubjectVisitAsReadUsingHMAC_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSubjectVisitAsReadUsingHMAC" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_SetSubjectVisitAsReadUsingHMAC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSubjectVisitAsReadUsingHMACResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_SetClinicalDataRecordsAsReadUsingHMAC_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetClinicalDataRecordsAsReadUsingHMAC" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_SetClinicalDataRecordsAsReadUsingHMAC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetClinicalDataRecordsAsReadUsingHMACResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_VerifyUserUsingHMAC_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUserUsingHMAC" />
+  </wsdl:message>
+  <wsdl:message name="IPIERService_VerifyUserUsingHMAC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUserUsingHMACResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPIERService">
+    <wsdl:operation name="StartSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/StartSession" message="tns:IPIERService_StartSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/StartSessionResponse" message="tns:IPIERService_StartSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/GetSubjectRecords" message="tns:IPIERService_GetSubjectRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/GetSubjectRecordsResponse" message="tns:IPIERService_GetSubjectRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectClinicalDataRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/GetSubjectClinicalDataRecords" message="tns:IPIERService_GetSubjectClinicalDataRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/GetSubjectClinicalDataRecordsResponse" message="tns:IPIERService_GetSubjectClinicalDataRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectVisitClinicalDataRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/GetSubjectVisitClinicalDataRecords" message="tns:IPIERService_GetSubjectVisitClinicalDataRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/GetSubjectVisitClinicalDataRecordsResponse" message="tns:IPIERService_GetSubjectVisitClinicalDataRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectVisitUnReadClinicalDataRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/GetSubjectVisitUnReadClinicalDataRecords" message="tns:IPIERService_GetSubjectVisitUnReadClinicalDataRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/GetSubjectVisitUnReadClinicalDataRecordsResponse" message="tns:IPIERService_GetSubjectVisitUnReadClinicalDataRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSubjectVisitAsRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/SetSubjectVisitAsRead" message="tns:IPIERService_SetSubjectVisitAsRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/SetSubjectVisitAsReadResponse" message="tns:IPIERService_SetSubjectVisitAsRead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetClinicalDataRecordsAsRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/SetClinicalDataRecordsAsRead" message="tns:IPIERService_SetClinicalDataRecordsAsRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/SetClinicalDataRecordsAsReadResponse" message="tns:IPIERService_SetClinicalDataRecordsAsRead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartSessionUsingHMAC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/StartSessionUsingHMAC" message="tns:IPIERService_StartSessionUsingHMAC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/StartSessionUsingHMACResponse" message="tns:IPIERService_StartSessionUsingHMAC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestUserSessionKeyUsingHMAC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/GetLatestUserSessionKeyUsingHMAC" message="tns:IPIERService_GetLatestUserSessionKeyUsingHMAC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/GetLatestUserSessionKeyUsingHMACResponse" message="tns:IPIERService_GetLatestUserSessionKeyUsingHMAC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectRecordsUsingHMAC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/GetSubjectRecordsUsingHMAC" message="tns:IPIERService_GetSubjectRecordsUsingHMAC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/GetSubjectRecordsUsingHMACResponse" message="tns:IPIERService_GetSubjectRecordsUsingHMAC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectVisitClinicalDataRecordsUsingHMAC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/GetSubjectVisitClinicalDataRecordsUsingHMAC" message="tns:IPIERService_GetSubjectVisitClinicalDataRecordsUsingHMAC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/GetSubjectVisitClinicalDataRecordsUsingHMACResponse" message="tns:IPIERService_GetSubjectVisitClinicalDataRecordsUsingHMAC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectVisitUnReadClinicalDataRecordsUsingHMAC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/GetSubjectVisitUnReadClinicalDataRecordsUsingHMAC" message="tns:IPIERService_GetSubjectVisitUnReadClinicalDataRecordsUsingHMAC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/GetSubjectVisitUnReadClinicalDataRecordsUsingHMACResponse" message="tns:IPIERService_GetSubjectVisitUnReadClinicalDataRecordsUsingHMAC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectClinicalDataRecordsUsingHMAC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/GetSubjectClinicalDataRecordsUsingHMAC" message="tns:IPIERService_GetSubjectClinicalDataRecordsUsingHMAC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/GetSubjectClinicalDataRecordsUsingHMACResponse" message="tns:IPIERService_GetSubjectClinicalDataRecordsUsingHMAC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSubjectVisitAsReadUsingHMAC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/SetSubjectVisitAsReadUsingHMAC" message="tns:IPIERService_SetSubjectVisitAsReadUsingHMAC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/SetSubjectVisitAsReadUsingHMACResponse" message="tns:IPIERService_SetSubjectVisitAsReadUsingHMAC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetClinicalDataRecordsAsReadUsingHMAC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/SetClinicalDataRecordsAsReadUsingHMAC" message="tns:IPIERService_SetClinicalDataRecordsAsReadUsingHMAC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/SetClinicalDataRecordsAsReadUsingHMACResponse" message="tns:IPIERService_SetClinicalDataRecordsAsReadUsingHMAC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUserUsingHMAC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIERService/VerifyUserUsingHMAC" message="tns:IPIERService_VerifyUserUsingHMAC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIERService/VerifyUserUsingHMACResponse" message="tns:IPIERService_VerifyUserUsingHMAC_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPIERService" type="tns:IPIERService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StartSession">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/StartSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectRecords">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/GetSubjectRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectClinicalDataRecords">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/GetSubjectClinicalDataRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectVisitClinicalDataRecords">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/GetSubjectVisitClinicalDataRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectVisitUnReadClinicalDataRecords">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/GetSubjectVisitUnReadClinicalDataRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSubjectVisitAsRead">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/SetSubjectVisitAsRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClinicalDataRecordsAsRead">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/SetClinicalDataRecordsAsRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartSessionUsingHMAC">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/StartSessionUsingHMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestUserSessionKeyUsingHMAC">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/GetLatestUserSessionKeyUsingHMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectRecordsUsingHMAC">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/GetSubjectRecordsUsingHMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectVisitClinicalDataRecordsUsingHMAC">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/GetSubjectVisitClinicalDataRecordsUsingHMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectVisitUnReadClinicalDataRecordsUsingHMAC">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/GetSubjectVisitUnReadClinicalDataRecordsUsingHMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubjectClinicalDataRecordsUsingHMAC">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/GetSubjectClinicalDataRecordsUsingHMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSubjectVisitAsReadUsingHMAC">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/SetSubjectVisitAsReadUsingHMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetClinicalDataRecordsAsReadUsingHMAC">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/SetClinicalDataRecordsAsReadUsingHMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUserUsingHMAC">
+      <soap:operation soapAction="http://tempuri.org/IPIERService/VerifyUserUsingHMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PIERService">
+    <wsdl:port name="BasicHttpBinding_IPIERService" binding="tns:BasicHttpBinding_IPIERService">
+      <soap:address location="http://pa-imi-ws-01/IMIIntegrationServices/PIERService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
