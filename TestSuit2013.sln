@@ -37,6 +37,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectDumperTest", "ObjectD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR_Algo_Impl_EqualStacks", "HR_Algo_Impl_EqualStacks\HR_Algo_Impl_EqualStacks.csproj", "{51F173D1-EAEE-401C-9142-ACC8607541F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR_Algo_Impl_CutTheSticks", "HR_Algo_Impl_CutTheSticks\HR_Algo_Impl_CutTheSticks.csproj", "{A788E019-119F-476B-9AC0-FB84CBB760F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR_amazon_FibonacciFactors", "HR_amazon_FibonacciFactors\HR_amazon_FibonacciFactors.csproj", "{6EBA1690-F110-4A6D-970E-B68F24CFB070}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR_amazon_MeetingSchedules", "HR_amazon_MeetingSchedules\HR_amazon_MeetingSchedules.csproj", "{9650B960-4D39-4E78-9AD2-90B81C965572}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR_amazon_ShortestSubSegment", "HR_amazon_ShortestSubSegment\HR_amazon_ShortestSubSegment.csproj", "{02ADABAC-A2FC-49F0-8140-1CD30D95BFA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +119,22 @@ Global
 		{51F173D1-EAEE-401C-9142-ACC8607541F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51F173D1-EAEE-401C-9142-ACC8607541F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51F173D1-EAEE-401C-9142-ACC8607541F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A788E019-119F-476B-9AC0-FB84CBB760F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A788E019-119F-476B-9AC0-FB84CBB760F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A788E019-119F-476B-9AC0-FB84CBB760F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A788E019-119F-476B-9AC0-FB84CBB760F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EBA1690-F110-4A6D-970E-B68F24CFB070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EBA1690-F110-4A6D-970E-B68F24CFB070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EBA1690-F110-4A6D-970E-B68F24CFB070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EBA1690-F110-4A6D-970E-B68F24CFB070}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9650B960-4D39-4E78-9AD2-90B81C965572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9650B960-4D39-4E78-9AD2-90B81C965572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9650B960-4D39-4E78-9AD2-90B81C965572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9650B960-4D39-4E78-9AD2-90B81C965572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02ADABAC-A2FC-49F0-8140-1CD30D95BFA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02ADABAC-A2FC-49F0-8140-1CD30D95BFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02ADABAC-A2FC-49F0-8140-1CD30D95BFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02ADABAC-A2FC-49F0-8140-1CD30D95BFA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

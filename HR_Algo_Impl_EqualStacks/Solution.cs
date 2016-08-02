@@ -66,6 +66,8 @@ namespace HR_Algo_Impl_EqualStacks
 				select a;
 			if(query.Any())
 				Console.WriteLine(query.First());
+			else
+				Console.WriteLine("0");
 		}
 	}
 }
