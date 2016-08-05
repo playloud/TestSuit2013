@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR_amazon_ShortestSubSegmen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR_Algo_Impl_NonDivisibleSubset", "HR_Algo_Impl_NonDivisibleSubset\HR_Algo_Impl_NonDivisibleSubset.csproj", "{BF023931-F6A9-4DFD-9E27-F1DF4B871CA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR_Algo_Implementation", "HR_Algo_Implementation\HR_Algo_Implementation.csproj", "{5885BA25-AA71-4577-AB1C-2C423D5DBA70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{BF023931-F6A9-4DFD-9E27-F1DF4B871CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF023931-F6A9-4DFD-9E27-F1DF4B871CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF023931-F6A9-4DFD-9E27-F1DF4B871CA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5885BA25-AA71-4577-AB1C-2C423D5DBA70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5885BA25-AA71-4577-AB1C-2C423D5DBA70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5885BA25-AA71-4577-AB1C-2C423D5DBA70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5885BA25-AA71-4577-AB1C-2C423D5DBA70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
